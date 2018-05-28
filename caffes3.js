@@ -45,32 +45,37 @@ function caffeesgroups() {
     for (i = 0; i < caffees.length; i++) {
         if (caffees[i].strenght >= 1 && caffees[i].strenght <= 3) {
             light.push(caffees[i]);
-        } else if (caffees[i].strenght > 3 && caffees[i].strenght >= 7) {
+        } else if (caffees[i].strenght > 3 && caffees[i].strenght <= 7) {
             mid.push(caffees[i]);
         } else if (caffees[i].strenght > 7) {
             strong.push(caffees[i]);
         }
     }
 
-    if (light.lengt != 0) {
+    if (light.length != 0) {
         var lightcaffees = "";
-        for (i = 0; i < light.length; i++) {
+        for (var i = 0; i < light.length; i++) {
             lightcaffees += light[i].name + ",";
-            document.getElementById("lightoutput").innerHTML = lightcaffees;
         }
+        document.getElementById("lightoutput").innerHTML = lightcaffees;
     }
+
+
     if (mid.length != 0) {
         var midcaffees = "";
-        for (i = 0; i < light.length; i++) {
+        for (i = 0; i < mid.length; i++) {
             midcaffees += mid[i].name + ",";
-            document.getElementById("midoutput").innerHTML = midcaffees;
         }
+        document.getElementById("midoutput").innerHTML = midcaffees;
     }
+
+
     if (strong.length != 0) {
         var strongcaffees = "";
-        for (i = 0; i < light.length; i++) {
+        for (i = 0; i < strong.length; i++) {
             strongcaffees += strong[i].name + ",";
-            document.getElementById("strongoutput").innerHTML = strongcaffees;
         }
+        document.getElementById("strongoutput").innerHTML = strongcaffees;
     }
+
 }
