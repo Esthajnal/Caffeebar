@@ -38,7 +38,7 @@ var caffees = [{
     }
 ]
 
-function caffessgroups() {
+function caffeesgroups() {
     light = [];
     mid = [];
     strong = [];
@@ -55,18 +55,22 @@ function caffessgroups() {
     if (light.lengt != 0) {
         var lightcaffees = "";
         for (i = 0; i < light.length; i++) {
-            document.getElementById("lightoutput").innerHTML = lightcaffees.name + ",";
+            lightcaffees += light[i].name + ",";
+            document.getElementById("lightoutput").innerHTML = lightcaffees;
         }
     }
     if (mid.length != 0) {
         var midcaffees = "";
         for (i = 0; i < light.length; i++) {
-            document.getElementById("midoutput").innerHTML = midcaffees.name + ",";
-        }
-        if (strong.length != 0) {
-            var strongcaffees = "";
-            for (i = 0; i < light.length; i++) {
-                document.getElementById("strongoutput").innerHTML = strongcaffees.name + ",";
-            }
+            midcaffees += mid[i].name + ",";
+            document.getElementById("midoutput").innerHTML = midcaffees;
         }
     }
+    if (strong.length != 0) {
+        var strongcaffees = "";
+        for (i = 0; i < light.length; i++) {
+            strongcaffees += strong[i].name + ",";
+            document.getElementById("strongoutput").innerHTML = strongcaffees;
+        }
+    }
+}
