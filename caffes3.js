@@ -44,11 +44,29 @@ function caffessgroups() {
     strong = [];
     for (i = 0; i < caffees.length; i++) {
         if (caffees[i].strenght >= 1 && caffees[i].strenght <= 3) {
-            light.push(caffees[i])
+            light.push(caffees[i]);
         } else if (caffees[i].strenght > 3 && caffees[i].strenght >= 7) {
-            mid.push(caffees[i])
+            mid.push(caffees[i]);
         } else if (caffees[i].strenght > 7) {
-            strong.push(caffees[i])
+            strong.push(caffees[i]);
         }
     }
-}
+
+    if (light.lengt != 0) {
+        var lightcaffees = "";
+        for (i = 0; i < light.length; i++) {
+            document.getElementById("lightoutput").innerHTML = lightcaffees.name + ",";
+        }
+    }
+    if (mid.length != 0) {
+        var midcaffees = "";
+        for (i = 0; i < light.length; i++) {
+            document.getElementById("midoutput").innerHTML = midcaffees.name + ",";
+        }
+        if (strong.length != 0) {
+            var strongcaffees = "";
+            for (i = 0; i < light.length; i++) {
+                document.getElementById("strongoutput").innerHTML = strongcaffees.name + ",";
+            }
+        }
+    }
