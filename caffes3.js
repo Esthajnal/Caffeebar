@@ -4,7 +4,7 @@
  Tegyél egy kereső mezőt a kávézó oldalára, amiben meg lehet adni a keresendő kávé nevét. 
  Találat esetén írd ki a keresett kávé minden adatát, különben a "Jelenleg nem kapható" felirat 
  jelenjen meg.*/
-/*Csinál 3 csoportot erősség szerint.*/
+/*Csinálj 3 csoportot erősség szerint.*/
 
 var caffees = [{
         name: "Tchibo",
@@ -37,3 +37,18 @@ var caffees = [{
         stock: 5,
     }
 ]
+
+function caffessgroups() {
+    light = [];
+    mid = [];
+    strong = [];
+    for (i = 0; i < caffees.length; i++) {
+        if (caffees[i].strenght >= 1 && caffees[i].strenght <= 3) {
+            light.push(caffees[i])
+        } else if (caffees[i].strenght > 3 && caffees[i].strenght >= 7) {
+            mid.push(caffees[i])
+        } else if (caffees[i].strenght > 7) {
+            strong.push(caffees[i])
+        }
+    }
+}
